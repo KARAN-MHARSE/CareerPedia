@@ -1,7 +1,19 @@
-export default function App() {
+import React from "react";
+import { BrowserRouter, Routes, Route } from "react-router-dom";
+import SignIn from "./CommonPages/SignIn";
+import SignUp from "./CommonPages/SignUp";
+
+const App = () => {
   return (
-    <h1 className="text-3xl font-bold underline text-green-400">
-      Hello world!
-    </h1>
+    <div>
+      <BrowserRouter>
+        <Routes>
+          <Route path="/sign-in" element={<SignIn />} />
+          <Route path="/sign-up" element={<SignUp />} />
+        </Routes>
+      </BrowserRouter>
+    </div>
   );
-}
+};
+
+export default App;
